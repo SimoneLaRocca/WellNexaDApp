@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    max-width: 500px;
+    margin: 20px auto 100px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aggiunta di una shadow */
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+/* ... Altri stili ... */
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* ... Altri stili ... */
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: #5374BD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover{
+    background-color: #475F94;
+}
+
+.choice {
+    display: flex;
+}
+
+.paziente {
+    display: flex;
+}
+
+.operatore {
+    display: flex;
+    margin-left: 50px;
+}
+
+.single-line {
+    white-space: nowrap;
+}
+
+.registrati {
+    margin-top: 30px;
+}
+
+.UserType {
+    width: 160px;
+    height: 35px;
+}
+
+.hidden {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #5374BD;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #475F94;
+}
+
+.paziente {
+}
+
+.paziente > *:not(:first-child) {
+    margin-top: 10px;
+}
+
+#dataNascita {
+    margin-top: 10px;
+}
+
+#messaggioErrore {
+    text-align: center;
+}

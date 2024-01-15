@@ -1,0 +1,62 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="WellNexaDApp:war exploded">
+    <output-path>$PROJECT_DIR$/target/WellNexaDApp-1.0-SNAPSHOT</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <exploded>true</exploded>
+        <module>WellNexaDApp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="WellNexaDApp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.web3j:core:4.10.0" />
+          <element id="library" level="project" name="Maven: org.web3j:abi:4.10.0" />
+          <element id="library" level="project" name="Maven: org.web3j:utils:4.10.0" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk18on:1.73" />
+          <element id="library" level="project" name="Maven: org.web3j:crypto:4.10.0" />
+          <element id="library" level="project" name="Maven: org.web3j:rlp:4.10.0" />
+          <element id="library" level="project" name="Maven: org.web3j:tuples:4.10.0" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-unixsocket:0.38.17" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-ffi:2.2.11" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jffi:1.3.9" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jffi:native:1.3.9" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm:9.2" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm-commons:9.2" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm-analysis:9.2" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm-tree:9.2" />
+          <element id="library" level="project" name="Maven: org.ow2.asm:asm-util:9.2" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-a64asm:1.0.0" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-x86asm:1.0.2" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-constants:0.10.3" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-enxio:0.32.13" />
+          <element id="library" level="project" name="Maven: com.github.jnr:jnr-posix:3.1.15" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:4.9.0" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:2.8.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.4.10" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:logging-interceptor:4.9.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.4.10" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.10" />
+          <element id="library" level="project" name="Maven: io.reactivex.rxjava2:rxjava:2.2.2" />
+          <element id="library" level="project" name="Maven: org.reactivestreams:reactive-streams:1.0.2" />
+          <element id="library" level="project" name="Maven: org.java-websocket:Java-WebSocket:1.5.3" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.14.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.2" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.30" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/WellNexaDApp-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="WellNexaDApp/web/Web" />
+    </root>
+  </artifact>
+</component>
