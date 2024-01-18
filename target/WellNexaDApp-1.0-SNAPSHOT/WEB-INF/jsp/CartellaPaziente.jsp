@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: simon
-  Date: 30/11/2023
-  Time: 02:42
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -52,7 +46,6 @@
             <td>Dr. Verdi</td>
             <td>Ecografia addominale</td>
         </tr>
-        <!-- Aggiungi altre righe secondo necessità -->
         </tbody>
     </table>
 </section>

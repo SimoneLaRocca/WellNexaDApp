@@ -83,9 +83,9 @@ th {
 }
 
 img {
-    width: 20px; /* Regola la larghezza dell'icona */
-    height: 20px; /* Regola l'altezza dell'icona */
-    cursor: pointer; /* Cambia il cursore quando si passa sopra l'icona */
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
 }
 
-/* ... Altri stili ... */
+

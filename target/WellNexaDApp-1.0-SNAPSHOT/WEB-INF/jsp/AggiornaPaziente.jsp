@@ -14,10 +14,8 @@
 <div class="container">
 
     <section>
-        <!-- Aggiungi sezione per aggiungere nuovi dati alla cartella clinica -->
         <h2>Nuova Visita</h2>
         <form action="${pageContext.request.contextPath}/OperatoreServlet/aggiungi_visita" method="post">
-            <!-- Inserisci campi per nuovi dati (es. nuovi esami, note, ecc.) -->
 
             <label for="codiceVisita">Codice visita:</label>
             <input type="text" id="codiceVisita" name="codiceVisita">
@@ -33,18 +31,13 @@
 
             <input type="hidden" name="codice_fiscale" value="${requestScope.paziente.codiceFiscale}">
 
-            <!-- Aggiungi altri campi per nuovi dati -->
-
-            <!-- Aggiungi pulsante per aggiungere nuovi dati -->
             <button type="submit">Salva</button>
         </form>
     </section>
 
     <section class="info">
-        <!-- Visualizza i dati del paziente -->
         <h2>Dati del Paziente</h2>
         <form action="processa_modifiche_servlet" method="post">
-            <!-- Inserisci campi dati del paziente come input (es. nome, cognome, ecc.) -->
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome"
                    value="${not empty requestScope.paziente.nome ? requestScope.paziente.nome : ''}">
@@ -58,15 +51,11 @@
             <label for="indirizzo">Indirizzo:</label>
             <input type="text" id="indirizzo" name="indirizzo" value="${requestScope.paziente.indirizzo}">
 
-            <!-- Aggiungi altri campi dati -->
-
-            <!-- Aggiungi pulsante per salvare le modifiche -->
             <button type="submit">Salva Modifiche</button>
         </form>
     </section>
 
     <section class="table">
-        <!-- Mostra le visite mediche fatte dal paziente -->
         <h2>Visite Mediche</h2>
         <table>
             <thead>

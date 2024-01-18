@@ -58,9 +58,9 @@ public class OperatoreServlet extends HttpServlet {
                 String codice = request.getParameter("codiceVisita");
                 String nota = request.getParameter("nota");
 
-                String nodeUrl = "https://rpc.sepolia.org/";  // Sostituisci con l'effettivo URL del nodo Sepolia
+                String nodeUrl = "https://rpc.sepolia.dev";  // Sostituisci con l'effettivo URL del nodo Sepolia
 
-                String contractAddress = "0x115fb129C0763ADF70E0ED4548E193695c64EaF5";  // Sostituisci con l'effettivo indirizzo del contratto
+                String contractAddress = "0x2d93253d0a411C3a77910e5D5a01A67501e16476";  // Sostituisci con l'effettivo indirizzo del contratto
 
                 String privateKey = "296d2295d7b2bdf85e3b40926a28742b1996772230c81fcde6ff1604c2d0689a";  // Sostituisci con la tua chiave privata
 
@@ -70,7 +70,11 @@ public class OperatoreServlet extends HttpServlet {
 
                 MedicalRecord contract = MedicalRecord.load(contractAddress, web3j, credentials, new DefaultGasProvider());
 
-                contract.addExamination(p.getIndirizzo(), codice, esame, nota);
+                try {
+                    contract.addExamination(p.getIndirizzo(), codice, esame, nota).send();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
                 path = "/WEB-INF/jsp/AggiornaPaziente.jsp";
                 break;

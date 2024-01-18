@@ -14,7 +14,6 @@
 
 <%@include file="Bar.jsp"%>
 
-<%-- Visualizza il messaggio di errore se presente --%>
 <c:if test="${not empty messaggioErrore}">
     <div id="messaggioErrore" style="color: red;">${messaggioErrore}</div>
 </c:if>
@@ -73,7 +72,6 @@
 
 <%@include file="Footer.jsp" %>
 
-<!-- Aggiungi eventuali script JavaScript qui -->
 
 </body>
 </html>

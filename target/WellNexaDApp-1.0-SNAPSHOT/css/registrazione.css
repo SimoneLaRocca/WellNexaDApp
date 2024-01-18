@@ -41,7 +41,7 @@ form {
 
 input[type="radio"] {
     margin-right: 5px;
-    vertical-align: middle; /* Aggiunto per allineare i campi radio verticalmente */
+    vertical-align: middle;
 }
 
 /* ... Altri stili ... */
@@ -107,12 +107,10 @@ button:hover {
 }
 
 .paziente {
-    /* Stile del contenitore */
 }
 
-/* Selettore che applica uno stile a tutti i figli tranne il primo */
 .paziente > *:not(:first-child) {
-    margin-top: 10px; /* Modifica la dimensione del margin-top secondo le tue esigenze */
+    margin-top: 10px;
 }
 
 #dataNascita {

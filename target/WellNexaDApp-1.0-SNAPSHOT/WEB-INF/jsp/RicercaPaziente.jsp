@@ -50,7 +50,6 @@
                     <td>${paziente.indirizzo}</td>
                     <td>${paziente.dataNascita}</td>
                     <td class="png">
-                        <!-- Aggiungi un'icona/link per la visualizzazione dei dettagli -->
                         <a href="${pageContext.request.contextPath}/OperatoreServlet?codiceFiscale=${paziente.codiceFiscale}">
                             <img src="${pageContext.request.contextPath}/img/img2.png">
                         </a>

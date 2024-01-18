@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: simon
-  Date: 23/11/2023
-  Time: 23:29
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -15,7 +9,6 @@
 <body>
 <%@include file="Bar.jsp"%>
 
-<%-- Visualizza il messaggio di errore se presente --%>
 <c:if test="${not empty messaggioErrore}">
     <div id="messaggioErrore" style="color: red;">${messaggioErrore}</div>
 </c:if>

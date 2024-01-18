@@ -60,7 +60,7 @@ textarea {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
-    resize: none; /* Impedisce la ridimensionamento */
+    resize: none;
 }
 
 table {
