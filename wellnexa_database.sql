@@ -1,0 +1,21 @@
+DROP DATABASE IF EXISTS wellnexa_database;
+CREATE DATABASE wellnexa_database;
+USE wellnexa_database;
+
+CREATE TABLE paziente (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(30) NOT NULL UNIQUE,
+  passwordHash VARCHAR(40) NOT NULL,
+  nome VARCHAR(20) NOT NULL,
+  cognome VARCHAR(20) NOT NULL,
+  dataNascita DATE NOT NULL,
+  indirizzo VARCHAR(42) NOT NULL,
+  codiceFiscale VARCHAR(16) NOT NULL UNIQUE
+);
+
+CREATE TABLE operatore (
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  email VARCHAR(30) NOT NULL UNIQUE,
+  passwordHash VARCHAR(40) NOT NULL,
+  codice VARCHAR(32) NOT NULL
+);
