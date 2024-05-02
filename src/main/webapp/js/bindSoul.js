@@ -1,20 +1,23 @@
-// web3.js deve essere caricato in precedenza nella tua pagina HTML
 
-// Al caricamento della pagina, aggiungi l'evento al pulsante
 document.addEventListener("DOMContentLoaded", () => {
-    // Aggiungi l'evento click al pulsante
-    document.getElementById("showExaminationsButton").addEventListener("click", _showExaminations);
+    document.getElementById("bindSoulButton").addEventListener("click", _bindSoul);
 });
 
-// Funzione per interagire con Metamask e selezionare manualmente l'account
+function getCodiceFiscale () {
+    const codiceFiscaleDiv = document.getElementById("_codiceFiscale");
+
+    if (codiceFiscaleDiv) {
+        const codiceFiscale = codiceFiscaleDiv.textContent.trim();
+        return codiceFiscale;
+    } else {
+        console.error('Codice Fiscale non trovato.');
+    }
+}
+
 async function selectMetamaskAccount() {
     try {
-        // Verifica se Metamask è installato
         if (window.ethereum) {
-            // Richiedi all'utente di connettere Metamask e selezionare l'account
             const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
-
-            // Restituisci l'account selezionato
             return accounts[0];
         } else {
             console.error('Metamask non è installato');
@@ -26,21 +29,14 @@ async function selectMetamaskAccount() {
     }
 }
 
-// Funzione per interagire con lo smart contract attraverso Metamask
-async function _showExaminations() {
+async function _bindSoul() {
     try {
-        // Verifica se Metamask è installato
         if (window.ethereum) {
-            // Richiedi all'utente di connettere Metamask
             await window.ethereum.request({ method: 'eth_requestAccounts' });
 
-            // Crea un'istanza di Web3 con Metamask provider
             const web3 = new Web3(window.ethereum);
 
-            // Specifica l'indirizzo del tuo smart contract
-            const contractAddress = '0xd985A34450F1e804Ae48A179628Feda5832790E4';  // Sostituisci con l'effettivo indirizzo del contratto
-
-            // Specifica l'ABI del tuo smart contract
+            const contractAddress = '0xd985A34450F1e804Ae48A179628Feda5832790E4';
             const contractABI = [
                 {
                     "inputs": [
@@ -832,47 +828,16 @@ async function _showExaminations() {
                     "stateMutability": "view",
                     "type": "function"
                 }
-            ];  // Sostituisci con l'effettivo ABI del contratto
+            ];
 
             const contract = new web3.eth.Contract(contractABI, contractAddress);
 
-            // Effettua la transazione per chiamare la funzione bindSoul
             const accounts = await web3.eth.getAccounts();
             const senderAddress = accounts[0];
 
-            //const codiceFiscale = await getCodiceFiscale();
+            const codiceFiscale = await getCodiceFiscale();
 
-            const examinations = await contract.methods.getExaminations().send({ from: senderAddress });
-            console.log("Risultato: ", examinations)
-
-            // Ottieni la tabella delle visite dal DOM
-            const table = document.getElementById("tabella_visite");
-
-            // Pulisci la tabella
-            table.innerHTML = '';
-
-            // Aggiungi un'intestazione alla tabella
-            const header = table.createTHead();
-            const row = header.insertRow(0);
-            const headers = ["Name", "Code", "Note"];
-            headers.forEach(headerText => {
-                const th = document.createElement("th");
-                const text = document.createTextNode(headerText);
-                th.appendChild(text);
-                row.appendChild(th);
-            });
-
-            // Aggiungi i dati delle examination alla tabella
-            const body = table.createTBody();
-            examinations.forEach(examination => {
-                const row = body.insertRow();
-                const nameCell = row.insertCell(0);
-                const codeCell = row.insertCell(1);
-                const noteCell = row.insertCell(2);
-                nameCell.textContent = examination.name;
-                codeCell.textContent = examination.code;
-                noteCell.textContent = examination.note;
-            });
+            const result = await contract.methods.bindSoul(codiceFiscale).send({ from: senderAddress });
 
             console.log('Transazione completata:', result);
         } else {
