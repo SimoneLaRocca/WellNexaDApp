@@ -51,7 +51,7 @@
             </div>
 
             <div id="indirizzoField">
-                <label for="indirizzoField">Indirizzo:</label>
+                <label for="indirizzoField">Indirizzo wallet:</label>
                 <input class="hidden" type="text" id="indirizzo" name="indirizzo">
             </div>
 

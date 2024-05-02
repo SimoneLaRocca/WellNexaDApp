@@ -1,5 +1,5 @@
 document.getElementById('registrazioneForm').addEventListener('submit', function (event) {
-    // Array di ID dei campi obbligatori
+    // campi obbligatori
     var requiredFields = ['email', 'password', 'tipoUtente'];
 
     for (var i = 0; i < requiredFields.length; i++) {

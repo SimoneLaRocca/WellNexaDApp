@@ -66,13 +66,18 @@ textarea {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 th, td {
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+}
+
+th {
+    background-color: #5374BD;
+    color: #fff;
 }
 
 .table {

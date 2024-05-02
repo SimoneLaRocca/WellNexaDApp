@@ -94,7 +94,6 @@ public class PazienteDAO {
             String paramName = entry.getKey();
             String[] paramValues = entry.getValue();
 
-            // Considera solo il primo valore (ignorando gli eventuali valori multipli per lo stesso parametro)
             if (paramValues != null && paramValues.length > 0) {
                 parameters.put(paramName, paramValues[0]);
             }
@@ -106,7 +105,6 @@ public class PazienteDAO {
             String paramName = entry.getKey();
             String paramValue = entry.getValue();
 
-            // Aggiungi condizione solo se il valore del parametro non è vuoto
             if (paramValue != null && !paramValue.isEmpty()) {
                 queryBuilder.append(" AND ").append(paramName).append(" = '").append(paramValue).append("'");
             }
@@ -168,6 +166,22 @@ public class PazienteDAO {
                     return true;
             }
             return false;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void updatePaziente(Paziente paziente, String indirizzo) {
+        if (paziente == null) return;
+        String sql = "UPDATE paziente SET indirizzo = ? WHERE codiceFiscale = ?";
+        try (Connection connection = ConPool.getConnection();
+             PreparedStatement ps = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
+
+            ps.setString(1, indirizzo);
+            ps.setString(2, paziente.getCodiceFiscale());
+
+            ps.executeUpdate();
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

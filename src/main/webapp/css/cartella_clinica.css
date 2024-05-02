@@ -39,3 +39,21 @@ th {
     color: #fff;
 }
 
+button {
+    background-color: #5374BD;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #475F94;
+}
+
+.sm {
+    margin-left: 12px;
+}
+

@@ -17,10 +17,6 @@
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: org.web3j:core:4.10.3" />
           <element id="library" level="project" name="Maven: org.web3j:abi:4.10.3" />
-          <element id="library" level="project" name="Maven: org.web3j:utils:4.10.3" />
-          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk18on:1.73" />
-          <element id="library" level="project" name="Maven: org.web3j:crypto:4.10.3" />
-          <element id="library" level="project" name="Maven: org.web3j:rlp:4.10.3" />
           <element id="library" level="project" name="Maven: org.web3j:tuples:4.10.3" />
           <element id="library" level="project" name="Maven: com.github.jnr:jnr-unixsocket:0.38.17" />
           <element id="library" level="project" name="Maven: com.github.jnr:jnr-ffi:2.2.11" />
@@ -52,6 +48,10 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.30" />
           <element id="library" level="project" name="Maven: io.github.adraffy:ens-normalize:0.1.2" />
+          <element id="library" level="project" name="Maven: org.web3j:crypto:4.10.3" />
+          <element id="library" level="project" name="Maven: org.web3j:rlp:4.10.3" />
+          <element id="library" level="project" name="Maven: org.web3j:utils:4.10.3" />
+          <element id="library" level="project" name="Maven: org.bouncycastle:bcprov-jdk18on:1.73" />
         </element>
       </element>
       <element id="directory" name="META-INF">

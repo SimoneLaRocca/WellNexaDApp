@@ -56,10 +56,6 @@
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.web3j:core:4.10.3" level="project" />
     <orderEntry type="library" name="Maven: org.web3j:abi:4.10.3" level="project" />
-    <orderEntry type="library" name="Maven: org.web3j:utils:4.10.3" level="project" />
-    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk18on:1.73" level="project" />
-    <orderEntry type="library" name="Maven: org.web3j:crypto:4.10.3" level="project" />
-    <orderEntry type="library" name="Maven: org.web3j:rlp:4.10.3" level="project" />
     <orderEntry type="library" name="Maven: org.web3j:tuples:4.10.3" level="project" />
     <orderEntry type="library" name="Maven: com.github.jnr:jnr-unixsocket:0.38.17" level="project" />
     <orderEntry type="library" name="Maven: com.github.jnr:jnr-ffi:2.2.11" level="project" />
@@ -91,5 +87,9 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-core:2.14.2" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.30" level="project" />
     <orderEntry type="library" name="Maven: io.github.adraffy:ens-normalize:0.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.web3j:crypto:4.10.3" level="project" />
+    <orderEntry type="library" name="Maven: org.web3j:rlp:4.10.3" level="project" />
+    <orderEntry type="library" name="Maven: org.web3j:utils:4.10.3" level="project" />
+    <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk18on:1.73" level="project" />
   </component>
 </module>
